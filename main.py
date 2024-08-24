@@ -1,6 +1,8 @@
+score = 0
 name = input("Welcome to GC mini golf! What is your name? ")
 holes = int(input(f'Hi, {name}! Would you like to play 3 or 6 holes? '))
-score = 0
+
+# Gets score for each hole
 if holes == 3:
     par = 9
     score += int(input("How many putts for hole 1?(par:3) "))
@@ -16,6 +18,8 @@ elif holes == 6:
     score += int(input("How many putts for hole 6?(par:3) "))
 else:
     print(f'{holes} is an invalid number')
+
+# Caluculates total score
 if score > par:
     total_score = score - par
     print(f'Nice try,{name}... Your total score was: +{total_score}')
